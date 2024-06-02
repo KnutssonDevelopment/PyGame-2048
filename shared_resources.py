@@ -4,6 +4,7 @@ import pygame
 pygame.init()
 WINDOW_SIZE = 1200
 screen = pygame.display.set_mode((WINDOW_SIZE, WINDOW_SIZE))
+pygame.display.set_caption("2048 Game")
 
 # Define constants
 BACKGROUND_COLOR = (187, 173, 160)
@@ -28,5 +29,6 @@ FONT_SIZE = 80
 
 TITLE_FONT_COLOR = (0, 0, 0)
 TITLE_FONT_SIZE = WINDOW_SIZE // 7
+TILE_MOVEMENT_SPEED = 40
 
 FONT_PATH = "res/fonts/Roboto/Roboto-Regular.ttf"

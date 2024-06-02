@@ -5,11 +5,6 @@ from shared_resources import *
 from objects.tile import Tile
 
 
-pygame.display.set_caption("2048 Game")
-
-
-
-
 class Board:
     def __init__(self, size=4):
         self.size = size

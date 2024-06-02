@@ -22,31 +22,30 @@ class Tile:
             self.direction = direction
 
     def move(self):
-        movement_speed = 20
 
         if self.direction == 'left':
-            self.x -= movement_speed
+            self.x -= TILE_MOVEMENT_SPEED
             if self.x <= (self.column - 1) * self.width:
                 self.column -= 1
                 self.x = self.column * self.width
                 self.direction = None
 
         elif self.direction == 'right':
-            self.x += movement_speed
+            self.x += TILE_MOVEMENT_SPEED
             if self.x >= (self.column + 1) * self.width:
                 self.column += 1
                 self.x = self.column * self.width
                 self.direction = None
 
         elif self.direction == 'up':
-            self.y -= movement_speed
+            self.y -= TILE_MOVEMENT_SPEED
             if self.y <= (self.row - 1) * self.height:
                 self.row -= 1
                 self.y = self.row * self.height
                 self.direction = None
 
         elif self.direction == 'down':
-            self.y += movement_speed
+            self.y += TILE_MOVEMENT_SPEED
             if self.y >= (self.row + 1) * self.height:
                 self.row += 1
                 self.x = self.column * self.height
